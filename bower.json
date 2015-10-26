@@ -1,0 +1,24 @@
+{
+  "name": "tw-community",
+  "homepage": "https://github.com/twchina/tw-community",
+  "authors": [
+    "Bojian Chen <bjchen@thoughtworks.com>"
+  ],
+  "description": "tw-community",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5"
+  }
+}
