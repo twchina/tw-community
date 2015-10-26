@@ -5,9 +5,14 @@
     <title>黑工网站</title>
     <link rel="stylesheet" href="lib/components/bootstrap/dist/css/bootstrap.css"/>
 </head>
-<body>
-<p>hello world</p>
+<body ng-app="App">
+
+<div ng-controller="MainController">
+    <input type="text" ng-model="hello"/>
+    <p>hello world {{hello}}</p>
+</div>
 
 <script src="lib/components/angular/angular.js"></script>
+<script src="js/main-controller.js"></script>
 </body>
 </html>
