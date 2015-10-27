@@ -10,7 +10,7 @@
 <header class="main-header">
     <div class="container">
         <div class="row">
-            <h1>黑工网站</h1>
+            <div class="col-lg-12"><h1>黑工网站</h1></div>
         </div>
     </div>
 </header>
@@ -23,17 +23,29 @@
             <li><a href="">Test</a></li>
             <li><a href="">Test</a></li>
             <li><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
         </ul>
     </div>
 </nav>
-<div class="container">
-    <div ng-controller="MainController">
-        <input type="text" ng-model="hello"/>
+<section>
+    <div class="container">
+        <div ng-controller="MainController">
+            <input type="text" ng-model="hello"/>
 
-        <p>hello world {{hello}}</p>
+            <p>hello world {{hello}}</p>
+        </div>
     </div>
-</div>
-<div class="foo"></div>
+</section>
+<div id="back-to-top"></div>
+<footer class="main-footer">
+    <div class="container">
+        
+    </div>
+</footer>
 <script src="lib/components/angular/angular.js"></script>
 <script src="js/main-controller.js"></script>
 </body>
