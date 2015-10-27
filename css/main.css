@@ -1,0 +1,37 @@
+a{
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body{
+    background-color: #EBEBEB;
+}
+
+.main-header {
+    height: 250px;
+    background-color: cyan;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.main-navigation {
+    text-align: center;
+    background-color: white;
+}
+
+.main-navigation li {
+    display: inline-block;
+}
+
+.main-navigation .menu li a {
+    color: #505050;
+    line-height: 4em;
+    display: block;
+    padding: 0 21px;
+}
+.main-navigation .menu li a:hover {
+    color: blue;;
+}

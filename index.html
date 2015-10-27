@@ -4,14 +4,36 @@
     <meta charset="UTF-8">
     <title>黑工网站</title>
     <link rel="stylesheet" href="lib/components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body ng-app="App">
+<header class="main-header">
+    <div class="container">
+        <div class="row">
+            <h1>黑工网站</h1>
+        </div>
+    </div>
+</header>
 
-<div ng-controller="MainController">
-    <input type="text" ng-model="hello"/>
-    <p>hello world {{hello}}</p>
+<nav class="main-navigation">
+    <div class="container">
+        <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div ng-controller="MainController">
+        <input type="text" ng-model="hello"/>
+
+        <p>hello world {{hello}}</p>
+    </div>
 </div>
-
+<div class="foo"></div>
 <script src="lib/components/angular/angular.js"></script>
 <script src="js/main-controller.js"></script>
 </body>
