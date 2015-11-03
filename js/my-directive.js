@@ -2,10 +2,10 @@
     module.directive('myDirective',[function () {
         return {
             restrict: 'E',
-            replace: true,
+            //replace: true,
             template:'<div>hello</div>',
             link: function (scope, element, attr) {
-                console.log(element);
+                console.log(element[0]);
             }
         }
     }])
