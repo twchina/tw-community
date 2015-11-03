@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="lib/components/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/main.css"/>
 </head>
-<body ng-app="App">
+<body ng-app="App" ng-controller="MainController">
 <header class="main-header">
     <div class="container">
         <div class="row">
@@ -18,20 +18,11 @@
 <nav class="main-navigation">
     <div class="container">
         <ul class="menu">
-            <li class="nav-current" role="presentation"><a href=".">Home</a></li>
-            <li class="" role="presentation"><a>Test</a></li>
-            <li class="" role="presentation"><a>Test</a></li>
-            <li class="" role="presentation"><a>Test</a></li>
-            <li class="" role="presentation"><a>Test</a></li>
-            <li class="" role="presentation"><a>Test</a></li>
-            <li class="" role="presentation"><a>Test</a></li>
-            <li class="" role="presentation"><a>Test</a></li>
-            <li class="" role="presentation"><a>Test</a></li>
-            <li class="" role="presentation"><a>Test</a></li>
+            <li role="presentation" ng-repeat="nav in navList"><a href=".">{{nav}}</a></li>
         </ul>
     </div>
 </nav>
-<section ng-controller="MainController">
+<section>
     <div class="container">
         <div class="row">
             <div class="col-md-8 main-content">
