@@ -1,0 +1,24 @@
+{
+  "name": "tw-community",
+  "version": "1.0.0",
+  "description": "tw",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twchina/tw-community.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twchina/tw-community/issues"
+  },
+  "homepage": "https://github.com/twchina/tw-community#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-git": "^1.6.0",
+    "gulp-html-replace": "^1.5.4"
+  }
+}
