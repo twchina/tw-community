@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var git = require('gulp-git');
+var exec = require('child_process').exec;
 
 gulp.task('dist', function () {
     gulp.src('src/index.html')
@@ -21,14 +21,11 @@ gulp.task('dist', function () {
         .pipe(gulp.dest('dist/lib/components/bootstrap/dist'));
 });
 
-gulp.task('deploy', function () {
-    git.init({
-        cwd: 'dist/'
+gulp.task('deploy', function (cb) {
+    exec('cd dist;git init;git add -A;git commit -m "update";git push -f https://github.com/twchina/tw-community.git master:gh-pages;',
+    function(err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
     });
-    gulp.src('dist/**')
-        .pipe(git.add({args: '-A'}))
-        .pipe(git.commit('deploy'))
-        .pipe(git.push('https://github.com/twchina/tw-community.git','gh-pages', {
-            args : '-f'
-        }))
 });
