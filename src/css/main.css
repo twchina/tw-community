@@ -53,6 +53,7 @@ a:hover {
 a:active,
 a:focus,
 a img {
+    text-decoration: none;
     outline: none;
 }
 .btn {

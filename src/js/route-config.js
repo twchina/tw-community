@@ -3,14 +3,18 @@
 
         $routeProvider.when('/home',{
             controller: 'HomeController',
-            templateUrl: 'pages/main.html'
+            templateUrl: 'pages/home.html'
+        });
+
+        $routeProvider.when('/other',{
+            templateUrl: 'pages/other.html'
         });
 
         $routeProvider.otherwise({
             redirectTo: '/home'
         });
 
-        $locationProvider.html5Mode(false);
+        //$locationProvider.html5Mode(true);
 
     });
 })(window.module);
