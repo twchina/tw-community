@@ -7,61 +7,14 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body ng-app="App" ng-controller="MainController">
-<header class="main-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12"><h1>黑工网站</h1></div>
-        </div>
-    </div>
-</header>
+<ng-view></ng-view>
 
-<nav class="main-navigation">
-    <div class="container">
-        <ul class="menu">
-            <li role="presentation" ng-repeat="nav in navList"><a href=".">{{nav}}</a></li>
-        </ul>
-    </div>
-</nav>
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 main-content">
-                <article class="post" ng-repeat="i in [1,2,3,4,5,6,7,8]">
-                    <div class="post-head">
-                        <h1 class="post-title">Hello{{i}}</h1>
-                        <div class="post-meta">
-                            <span>author</span><span>2015-11-11</span>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <p>This is an example</p>
-                    </div>
-                    <footer class="post-footer">
-                        footer----------------!##
-                    </footer>
-                </article>
-            </div>
-            <div class="col-md-4 sidebar" ng-repeat="i in [1,2,3,4,5,6,7,8]">
-                <div class="widget">
-                    <h4 class="title">Side bar{{i}}</h4>
-                    <div class="content">
-                        <p>123</p>
-                        <p>1234</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div id="back-to-top"></div>
-<footer class="main-footer">
-    <div class="container">
-        <my-directive></my-directive>
-    </div>
-</footer>
 <script src="lib/components/angular/angular.min.js"></script>
+<script src="lib/components/angular-route/angular-route.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/route-config.js"></script>
 <script src="js/main-controller.js"></script>
+<script src="js/home-controller.js"></script>
 <script src="js/my-directive.js"></script>
 </body>
 </html>

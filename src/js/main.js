@@ -1,1 +1,1 @@
-window.module = angular.module('App', []);
+window.module = angular.module('App', ['ngRoute']);

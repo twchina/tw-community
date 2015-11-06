@@ -1,0 +1,60 @@
+<header class="main-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12"><h1>黑工网站</h1></div>
+        </div>
+    </div>
+</header>
+
+<nav class="main-navigation">
+    <div class="container">
+        <ul class="menu">
+            <li role="presentation" class="nav-current"><a ng-href="/#/home">Home</a></li>
+            <li role="presentation"><a href=".">社区活动</a></li>
+            <li role="presentation"><a href=".">洞见</a></li>
+            <li role="presentation"><a href=".">思沃学院</a></li>
+            <li role="presentation"><a href=".">相关视频</a></li>
+            <li role="presentation"><a href=".">招聘职位</a></li>
+            <li role="presentation"><a href=".">其他</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 main-content">
+                <article class="post" ng-repeat="i in [1,2,3,4,5,6,7,8]">
+                    <div class="post-head">
+                        <h1 class="post-title">Hello{{i}}</h1>
+                        <div class="post-meta">
+                            <span>author</span><span>2015-11-11</span>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>This is an example</p>
+                    </div>
+                    <footer class="post-footer">
+                        footer----------------!##
+                    </footer>
+                </article>
+            </div>
+            <div class="col-md-4 sidebar" ng-repeat="i in [1,2,3,4,5,6,7,8]">
+                <div class="widget">
+                    <h4 class="title">Side bar{{i}}</h4>
+                    <div class="content">
+                        <p>123</p>
+                        <p>1234</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="back-to-top"></div>
+<footer class="main-footer">
+    <div class="container">
+        <my-directive></my-directive>
+    </div>
+</footer>

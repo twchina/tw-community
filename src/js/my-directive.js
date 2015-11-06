@@ -5,7 +5,6 @@
             //replace: true,
             template:'<div>hello</div>',
             link: function (scope, element, attr) {
-                console.log(element[0]);
             }
         }
     }])
