@@ -17,8 +17,8 @@ gulp.task('js', function () {
 })
 
 gulp.task('angular', function () {
-    return gulp.src('src/lib/components/angular/angular.min.js')
-        .pipe(gulp.dest('dist/lib/components/angular'));
+    return gulp.src('src/lib/components/angular*/angular*.js')
+        .pipe(gulp.dest('dist/lib/components/'));
 })
 
 gulp.task('jquery', function () {
