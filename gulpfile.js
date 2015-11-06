@@ -1,24 +1,40 @@
 var gulp = require('gulp');
 var exec = require('child_process').exec;
 
-gulp.task('dist', function () {
-    gulp.src('src/index.html')
+gulp.task('html', function () {
+    return gulp.src('src/index.html')
         .pipe(gulp.dest('dist'));
+})
 
-    gulp.src('src/css/**')
+gulp.task('css', function () {
+    return gulp.src('src/css/**')
         .pipe(gulp.dest('dist/css'));
+})
 
-    gulp.src('src/js/**')
+gulp.task('js', function () {
+    return gulp.src('src/js/**')
         .pipe(gulp.dest('dist/js'));
+})
 
-    gulp.src('src/lib/components/angular/angular.min.js')
+gulp.task('angular', function () {
+    return gulp.src('src/lib/components/angular/angular.min.js')
         .pipe(gulp.dest('dist/lib/components/angular'));
+})
 
-    gulp.src('src/lib/components/jquery/dist/jquery.min.js')
+gulp.task('jquery', function () {
+    return gulp.src('src/lib/components/jquery/dist/jquery.min.js')
         .pipe(gulp.dest('dist/lib/components/jquery/dist'));
+})
 
-    gulp.src('src/lib/components/bootstrap/dist/**')
+gulp.task('bootstrap', function () {
+    return gulp.src('src/lib/components/bootstrap/dist/**')
         .pipe(gulp.dest('dist/lib/components/bootstrap/dist'));
+
+})
+
+gulp.task('dist', ['html', 'css', 'js', 'angular', 'jquery', 'bootstrap'], function (cb) {
+    console.log('finish');
+    cb();
 });
 
 gulp.task('deploy', function (cb) {
