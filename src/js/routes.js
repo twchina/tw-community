@@ -10,6 +10,10 @@
             templateUrl: 'pages/other.html'
         });
 
+        $routeProvider.when('/recruit',{
+            templateUrl: 'pages/recruit.html'
+        });
+
         $routeProvider.otherwise({
             redirectTo: '/home'
         });
