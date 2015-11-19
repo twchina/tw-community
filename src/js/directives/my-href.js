@@ -3,10 +3,12 @@
         return {
             restrict: 'A',
             link: function (scope, element, attr) {
-                element.bind('click', function () {
+                element.on('click', function () {
                     $location.path(attr['myHref']);
                     scope.$apply();
-                })
+                });
+                element.addClass('link');
+
             }
         }
     }])
