@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ThoughtWorks Community</title>
+    <link rel="stylesheet" href="lib/components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <base href="/" />
+</head>
+<body ng-app="App" ng-controller="MainController">
+<header class="main-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12"><h1>ThoughtWorks Community</h1></div>
+        </div>
+    </div>
+</header>
+
+<nav class="main-navigation">
+    <div class="container">
+        <ul class="menu">
+            <li role="presentation" ng-class="getClass('/home')">
+                <a my-href="/home">Home</a>
+            </li>
+            <li role="presentation" ng-class="getClass('/community')">
+                <a my-href="/community">社区活动</a>
+            </li>
+            <li role="presentation" ng-class="getClass('/insight')">
+                <a my-href="/insight">洞见</a>
+            </li>
+            <li role="presentation" ng-class="getClass('/tw-academy')">
+                <a my-href="/tw-academy">思沃学院</a>
+            </li>
+            <li role="presentation" ng-class="getClass('/video')">
+                <a my-href="/video">相关视频</a>
+            </li>
+            <li role="presentation" ng-class="getClass('/recruit')">
+                <a my-href="/recruit">招聘职位</a>
+            </li>
+            <li role="presentation" ng-class="getClass('/other')">
+                <a my-href="/other">其他</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<ng-view></ng-view>
+
+<div id="back-to-top"></div>
+<footer class="main-footer">
+    <div class="container">
+        <my-directive></my-directive>
+    </div>
+</footer>
+
+<script src="lib/components/angular/angular.min.js"></script>
+<script src="lib/components/angular-route/angular-route.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/routes.js"></script>
+<script src="js/main-controller.js"></script>
+<script src="js/home-controller.js"></script>
+<script src="js/my-directive.js"></script>
+<script src="js/directives/my-href.js"></script>
+</body>
+</html>
