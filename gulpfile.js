@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var mtry = require('./gulp-plugin/my-try.js');
 var exec = require('child_process').exec;
 gulp.task('html', function () {
-    return gulp.src('src/index.html')
+    return gulp.src('src/**/*.html')
         .pipe(gulp.dest('dist'));
 });
 
