@@ -1,13 +1,15 @@
 (function (module) {
-    module.directive('myInclude', function () {
+    module.directive('myInclude', ['$http', function ($http) {
         return {
             restrict: 'EA',
-            templateUrl: function (elem, attr) {
-                return attr.src;
-            },
             link: function (scope, element, attr) {
-
+                console.log(attr.src);
+                $http.get(attr.src)
+                    .then(function (result) {
+                        element.html(result.data);
+                        console.log(result.data);
+                    });
             }
         }
-    })
+    }])
 })(window.module);
